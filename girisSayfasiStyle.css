@@ -1,0 +1,36 @@
+body{
+    background-color: rgb(220, 237, 252);
+    font-family:  Arial, sans-serif;
+}
+
+nav .nav-link{
+    padding: 5px;
+    text-decoration: none;
+    color: rgb(105, 95, 216);
+}
+
+nav .nav-header{
+    padding: 5px;
+    color: rgb(105, 95, 216);
+}
+
+nav{
+    font-weight: bold;
+    float: left;
+    border: 2px solid cyan;
+    border-radius: 5px;
+    background-color: lightcyan;
+    width: 33%;
+    
+}
+
+section{
+    float: right;
+    border: 2px solid purple;
+    background-color: lightcoral;
+    border-radius: 8px;
+    width: 66%;
+}
+section h2,a,p{
+    padding: 5px;
+}
