@@ -5,34 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Özgeçmiş | Cafer Yusuf Görmez</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="ozgecmis.css">
 </head>
-<body class="bg-light my-5 shadow-lg bg-white p-5 rounded"> 
-    <main class="container">
-        <header class="border-bottom pb-3 mb-4 text-center">
-            <h1 class="display-4 fw-bold">Cafer Yusuf Görmez</h1>
-            <p class="text-muted">Bilgisayar Mühendisliği Öğrencisi | Sakarya Üniversitesi</p>
-        </header>
+<body>
 
-        <div class="row">
-            <section class="col-md-8">
-                <h2 class="h4 border-start border-4 border-primary ps-2 mb-3">Eğitim Bilgisleri</h2>
-                <article class="mb-4">
-                    <h3 class="h5">Sakarya Üniversitesi</h3>
-                    <p class="text-secondary">Bilgisayar Mühendisliği | 2024 - Günümüz</p>
-                    <p>Web teknolojileri, nesneye dayalı programlama üzerine eğitim almaktayım</p>
-                </article>
-            </section>
-
-            <aside class="col-md-4 bg-light p-3 rounded">
-                <h2 class="h5 fw-bold">Yetenekler</h2>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item bg-transparent">C# / C++ / HTML5 / CSS / PHP</li>
-                    <li class="list-group-item bg-transparent">Arduino / ESP32 / ESP8266</li>
-                    <li class="list-group-item bg-transparent">Blender 3D</li>
-                    <li class="list-group-item bg-transparent">Siber güvenlik (Kali Linux)</li>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="girisSayfasi.html">Cafer Yusuf Görmez</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#anaMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="anaMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="girisSayfasi.html">Hakkında</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="ozgecmis.html">Özgeçmiş</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ilgialanlarim.html">İlgi Alanlarım</a></li>
+                    <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-primary text-white ms-lg-3" href="login.html">Login</a></li>
                 </ul>
-            </aside>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="resume-card">
+            <header class="border-bottom pb-3 mb-4 text-center">
+                <h1 class="display-4 fw-bold text-primary">Cafer Yusuf Görmez</h1>
+                <p class="lead text-muted">Bilgisayar Mühendisliği Öğrencisi | Sakarya Üniversitesi</p>
+            </header>
+
+            <div class="row">
+                <section class="col-md-8">
+                    <h2 class="h4 border-start border-4 border-primary ps-3 mb-4">Eğitim Bilgileri</h2>
+                    <article class="mb-5">
+                        <h3 class="h5 fw-bold">Sakarya Üniversitesi</h3>
+                        <p class="text-secondary mb-1">Bilgisayar Mühendisliği | 2024 - Günümüz</p>
+                        <p>Web teknolojileri, nesneye dayalı programlama ve veri yapıları üzerine yoğunlaşarak akademik gelişimimi sürdürmekteyim.</p>
+                    </article>
+                </section>
+
+                <aside class="col-md-4">
+                    <div class="bg-light p-4 rounded-4 shadow-sm">
+                        <h2 class="h5 fw-bold mb-3"><i class="bi bi-star-fill me-2"></i>Yetenekler</h2>
+                        <div class="mb-3">
+                            <span class="badge bg-primary">C#</span>
+                            <span class="badge bg-primary">C++</span>
+                            <span class="badge bg-dark">PHP</span>
+                            <span class="badge bg-info text-dark">HTML5/CSS</span>
+                        </div>
+                        <h2 class="h5 fw-bold mb-3 mt-4">Donanım</h2>
+                        <ul class="list-unstyled small">
+                            <li>✔ Arduino Uno & ESP32</li>
+                            <li>✔ Siber güvenlik</li>
+                            <li>✔ 3D modelleme</li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
         </div>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

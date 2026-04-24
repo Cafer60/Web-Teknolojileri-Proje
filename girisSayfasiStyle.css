@@ -1,36 +1,63 @@
-body{
-    background-color: rgb(220, 237, 252);
-    font-family:  Arial, sans-serif;
+body {
+    background-color: #f0f4f8;
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-nav .nav-link{
-    padding: 5px;
+.menu-box {
+    background-color: #ffffff;
+    border-left: 5px solid #695fd8;
+    border-radius: 12px;
+}
+
+.nav-link {
+    padding: 8px 15px;
     text-decoration: none;
     color: rgb(105, 95, 216);
-}
-
-nav .nav-header{
-    padding: 5px;
-    color: rgb(105, 95, 216);
-}
-
-nav{
-    font-weight: bold;
-    float: left;
-    border: 2px solid cyan;
+    transition: all 0.3s ease;
     border-radius: 5px;
-    background-color: lightcyan;
-    width: 33%;
-    
 }
 
-section{
-    float: right;
-    border: 2px solid purple;
-    background-color: lightcoral;
-    border-radius: 8px;
-    width: 66%;
+.nav-link:hover {
+    background-color: rgb(105, 95, 216);
+    color: #ffffff !important;
 }
-section h2,a,p{
-    padding: 5px;
+
+.login-ozel {
+    border: 1px solid rgb(105, 95, 216); /* Kenarlık ekle */
+    text-align: center;
+    margin-top: 10px;
+}
+
+.login-ozel:hover {
+    background-color: rgb(105, 95, 216);
+    color: white !important;
+}
+
+.nav-link.active {
+    color: #695fd8;
+    font-weight: bold;
+}
+
+.content-box {
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+
+h2 {
+    color: #2c3e50;
+}
+
+@media (max-width: 991px) {
+    nav {
+        margin-bottom: 20px;
+    }
+}
+
+footer {
+    border-top: 3px solid #695fd8; /* Navigasyondaki mor/mavi tonuyla uyum sağlar */
+}
+
+footer a:hover {
+    color: #695fd8 !important; /* Üstüne gelince yazı rengin değişsin */
+    transition: 0.3s;
 }
