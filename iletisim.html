@@ -6,6 +6,7 @@
     <title>İletişim | Cafer Yusuf Görmez</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="iletisim.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
 
@@ -33,7 +34,7 @@
             <div class="col-lg-10 contact-card p-5 shadow">
                 <h2 class="text-center fw-bold mb-5">İletişim Formu</h2>
                 
-                <form id="contactForm" action="gonder.php" method="POST" onsubmit="return validateForm()">
+                <form id="app" action="gonder.php" method="POST" onsubmit="return validateForm()">
                     <div class="row g-4">
                         <div class="col-md-6">
                             <label class="form-label fw-bold">Adınız *</label>
@@ -46,7 +47,7 @@
 
                         <div class="col-md-6">
                             <label class="form-label fw-bold">E-posta *</label>
-                            <input type="email" id="email" name="email" class="form-control">
+                            <input type="email" id="email" v-model="email" name="email" class="form-control">
                         </div>
                         <div class="col-md-6">
                             <label class="form-label fw-bold">Telefon Numarası *</label>
@@ -169,9 +170,21 @@
                             </div>
                         </div>
 
-                        <div class="col-12 d-flex gap-3">
-                            <button type="submit" class="btn btn-primary px-5">Gönder</button>
-                            <button type="reset" class="btn btn-outline-danger">Temizle</button>
+                            <div class="col-12 d-flex gap-3">
+                                <div class="col-12 d-flex flex-wrap gap-2 mt-4">
+
+                                    <button type="button" onclick="validateForm()" class="btn btn-secondary">
+                                        JS ile Denetle
+                                    </button>
+
+                                    <button type="button" @click="vueDenetle" class="btn btn-success">
+                                        Vue.js ile Denetle
+                                    </button>
+
+                                    <button type="submit" class="btn btn-primary px-4">Formu Gönder</button>
+                                    <button type="reset" class="btn btn-outline-danger">Temizle</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </form>
@@ -179,37 +192,6 @@
         </div>
     </main>
 
-    <script>
-        function validateForm() {
-            var name = document.getElementById("name").value;
-            var surname = document.getElementById("surname").value;
-            var email = document.getElementById("email").value;
-            var phone = document.getElementById("phone").value;
-            var message = document.getElementById("message").value;
-
-            // 1. Boş Alan Kontrolü
-            if (name == "" || surname == "" || email == "" || phone == "" || message == "") {
-                alert("Lütfen yıldızlı (*) tüm alanları doldurunuz!");
-                return false;
-            }
-
-            // 2. Email Format Kontrolü (Regex)
-            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                alert("Geçerli bir e-posta adresi giriniz!");
-                return false;
-            }
-
-            // 3. Telefon Kontrolü (Sadece rakam ve 10-11 haneli mi?)
-            var phoneRegex = /^[0-9]{11}$/;
-            if (!phoneRegex.test(phone)) {
-                alert("Telefon numarası sadece rakamlardan oluşmalı ve 11 haneli olmalıdır!");
-                return false;
-            }
-
-            alert("Form başarıyla doğrulandı! Gönderiliyor...");
-            return true;
-        }
-    </script>
+    <script src="iletisim.js"></script>
 </body>
 </html>
