@@ -1,0 +1,63 @@
+body { 
+    background-color: #0d0d0d; 
+    color: #00ff41; 
+    font-family: 'Courier New', Courier, monospace; 
+}
+
+.nav-link {
+    padding: 8px 15px;
+    text-decoration: none;
+    color: rgb(105, 95, 216);
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.nav-link:hover {
+    background-color: rgb(105, 95, 216);
+    color: #ffffff !important;
+}
+
+.login-ozel {
+    border: 1px solid rgb(105, 95, 216); /* Kenarlık ekle */
+    text-align: center;
+    margin-top: 10px;
+}
+
+.login-ozel:hover {
+    background-color: rgb(105, 95, 216);
+    color: white !important;
+}
+
+.news-card { 
+    background: #1a1a1a; 
+    border: 1px solid #00ff41; 
+    transition: 0.3s; 
+    box-shadow: 0 0 5px rgba(0, 255, 65, 0.2);
+}
+
+.news-card:hover { 
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.5);
+    transform: scale(1.01);
+}
+
+.card-title { color: #00ff41; font-weight: bold; }
+.text-muted { color: #008f11 !important; } /* Daha koyu yeşil */
+.score-badge { 
+    background-color: #00ff41; 
+    color: #000; 
+    font-weight: bold; 
+}
+
+.btn-outline-info {
+    color: #00ff41;
+    border-color: #00ff41;
+}
+
+.btn-outline-info:hover {
+    background-color: #00ff41;
+    color: #000;
+}
+
+.navbar { 
+    border-bottom: 1px solid #00ff41; 
+}

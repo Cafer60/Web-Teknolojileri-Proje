@@ -33,11 +33,6 @@ body {
     color: white !important;
 }
 
-.nav-link.active {
-    color: #695fd8;
-    font-weight: bold;
-}
-
 .content-box {
     background-color: #ffffff;
     border-radius: 12px;
