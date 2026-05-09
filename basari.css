@@ -1,0 +1,17 @@
+ body { 
+    background-color: #f0f8ff; 
+    height: 100vh; display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-family: sans-serif; 
+}
+        
+.success-card { 
+    background: white; 
+    padding: 3rem; 
+    border-radius: 20px; 
+    text-align: center; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+    border-top: 5px solid #28a745; 
+}
+    

@@ -12,18 +12,18 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="girisSayfasi.html">Cafer Yusuf Görmez</a>
+            <a class="navbar-brand fw-bold" href="index.html">Cafer Yusuf Görmez</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#anaMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="anaMenu">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="girisSayfasi.html">Hakkında</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Hakkında</a></li>
                     <li class="nav-item"><a class="nav-link" href="ozgecmis.html">Özgeçmiş</a></li>
                     <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
                     <li class="nav-item"><a class="nav-link" href="ilgialanlarim.html">İlgi Alanlarım</a></li>
                     <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
-                    <li class="nav-item"><a class="nav-link btn btn-primary text-white ms-lg-3" href="login.php">Login</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-primary text-white ms-lg-3" href="login.html">Login</a></li>
                 </ul>
             </div>
         </div>
@@ -38,20 +38,20 @@
                     <div class="row g-4">
                         <div class="col-md-6">
                             <label class="form-label fw-bold">Adınız *</label>
-                            <input type="text" id="name" name="name" class="form-control">
+                            <input type="text" id="name" name="name" class="form-control" required>
                         </div>
                         <div class="col-md-6">
                             <label class="form-label fw-bold">Soyadınız *</label>
-                            <input type="text" id="surname" name="surname" class="form-control">
+                            <input type="text" id="surname" name="surname" class="form-control" required>
                         </div>
 
                         <div class="col-md-6">
                             <label class="form-label fw-bold">E-posta *</label>
-                            <input type="email" id="email" v-model="email" name="email" class="form-control">
+                            <input type="email" id="email" v-model="email" name="email" class="form-control" required>
                         </div>
                         <div class="col-md-6">
                             <label class="form-label fw-bold">Telefon Numarası *</label>
-                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="05xxxxxxxxx">
+                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="05xxxxxxxxx" required>
                         </div>
 
                         <div class="col-md-6">
@@ -146,45 +146,35 @@
                             </select>
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <label class="form-label fw-bold d-block">Cinsiyet</label>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="gender" value="erkek" checked>
-                                <label class="form-check-label">Erkek</label>
+                                <input class="form-check-input" type="radio" name="gender" value="Erkek" id="erkek">
+                                <label class="form-check-label" for="erkek">Erkek</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="gender" value="kadin">
-                                <label class="form-check-label">Kadın</label>
+                                <input class="form-check-input" type="radio" name="gender" value="Kadın" id="kadin">
+                                <label class="form-check-label" for="kadin">Kadın</label>
                             </div>
                         </div>
 
                         <div class="col-12">
                             <label class="form-label fw-bold">Mesajınız *</label>
-                            <textarea id="message" name="message" class="form-control" rows="3"></textarea>
+                            <textarea id="message" name="message" class="form-control" rows="3" required></textarea>
                         </div>
 
                         <div class="col-12">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="confirm" required>
-                                <label class="form-check-label small">Bilgilerimin doğruluğunu onaylıyorum.</label>
+                                <label class="form-check-label small" for="confirm">Bilgilerimin doğruluğunu onaylıyorum.</label>
                             </div>
                         </div>
 
-                            <div class="col-12 d-flex gap-3">
-                                <div class="col-12 d-flex flex-wrap gap-2 mt-4">
-
-                                    <button type="button" onclick="validateForm()" class="btn btn-secondary">
-                                        JS ile Denetle
-                                    </button>
-
-                                    <button type="button" @click="vueDenetle" class="btn btn-success">
-                                        Vue.js ile Denetle
-                                    </button>
-
-                                    <button type="submit" class="btn btn-primary px-4">Formu Gönder</button>
-                                    <button type="reset" class="btn btn-outline-danger">Temizle</button>
-                                </div>
-                            </div>
+                        <div class="col-12 d-flex flex-wrap gap-2 mt-2">
+                            <button type="button" onclick="validateForm()" class="btn btn-secondary">JS ile Denetle</button>
+                            <button type="button" @click="vueDenetle" class="btn btn-success">Vue.js ile Denetle</button>
+                            <button type="submit" class="btn btn-primary px-4">Formu Gönder</button>
+                            <button type="reset" class="btn btn-outline-danger">Temizle</button>
                         </div>
                     </div>
                 </form>
