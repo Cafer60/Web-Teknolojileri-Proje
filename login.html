@@ -9,30 +9,32 @@
 </head>
 <body>
 
-<div class="login-card">
-    <div class="text-center mb-4">
-        <h2 class="fw-bold text-primary">Giriş Yap</h2>
-        <p class="text-muted">Lütfen bilgilerinizi kontrol edin.</p>
-    </div>
-
-    <form action="kontrol.php" method="POST">
-        <div class="mb-3">
-            <label for="email" class="form-label">E-posta Adresi</label>
-            <input type="email" name="email" class="form-control" id="email" placeholder="numara@sakarya.edu.tr" required>
+    <div class="login-card">
+        <div class="text-center mb-4">
+            <h2 class="fw-bold text-primary">Giriş Yap</h2>
+            <p class="text-muted">Lütfen bilgilerinizi kontrol edin.</p>
         </div>
+
+        <form action="kontrol.php" method="POST">
+            <div class="mb-3">
+                <label for="email" class="form-label">E-posta Adresi</label>
+                <input type="email" name="email" class="form-control" id="email" placeholder="numara@sakarya.edu.tr" required>
+            </div>
+            
+            <div class="mb-4">
+                <label for="password" class="form-label">Şifre</label>
+                <input type="password" name="password" class="form-control" id="password" placeholder="numara" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Sisteme Giriş Yap</button>
+        </form>
         
-        <div class="mb-4">
-            <label for="password" class="form-label">Şifre</label>
-            <input type="password" name="password" class="form-control" id="password" placeholder="numara" required>
+        <div class="text-center mt-4">
+            <a href="index.html" class="text-decoration-none small text-secondary">← Ana Sayfaya Dön</a>
         </div>
-
-        <button type="submit" class="btn btn-primary w-100">Sisteme Giriş Yap</button>
-    </form>
-    
-    <div class="text-center mt-4">
-        <a href="index.html" class="text-decoration-none small text-secondary">← Ana Sayfaya Dön</a>
     </div>
-</div>
+
+    
 
 </body>
 </html>
